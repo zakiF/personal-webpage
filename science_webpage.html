@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Zaki Fadlullah Wilmot - Computational Oncologist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: #34495e;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #2c3e50;
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
+        section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .profile-section {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .research-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 4px solid #3498db;
+        }
+
+        .research-card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+
+        .publication-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-authors {
+            font-style: italic;
+            margin-bottom: 0.3rem;
+        }
+
+        .publication-journal {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+        }
+
+        .contact-item strong {
+            margin-right: 0.5rem;
+            color: #2c3e50;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .profile-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .profile-image {
+                justify-self: center;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Dr. Zaki Fadlullah Wilmot</h1>
+            <p>Assistant Professor (Research Track) | Computational Oncology | University of Utah</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="profile-section">
+                <div class="profile-image">
+                    Your Photo Here
+                </div>
+                <div>
+                    <p>Welcome to my research webpage! I am an Assistant Professor (Research Track) at the University of Utah, specializing in bioinformatics and computational oncology. My research bridges computational approaches with translational oncology, contributing to clinically meaningful discoveries.</p>
+                    
+                    
+                    <p>My current research interests include:</p>
+                    <ul style="margin: 1rem 0; padding-left: 2rem;">
+                        <li>Pan-cancer scRNA-seq analysis for drug discovery</li>
+                        <li>Immune-related adverse events and immunotherapy efficacy</li>
+                        <li>Plasma cfDNA genomics for prostate cancer prognosis</li>
+                        <li>Clinical trial data mining and pattern recognition</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research Projects</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <h3>Pan-Cancer scRNA-seq Drug Discovery</h3>
+                    <p><strong>Focus:</strong> Immunotherapy toxicity and efficacy</p>
+                    <p>Analyzing pan-cancer single-cell RNA sequencing data to discover targetable drug candidates that mitigate immune-related adverse events while preserving immunotherapy efficacy. This work aims to improve patient outcomes by reducing toxicity without compromising treatment effectiveness.</p>
+                </div>
+                
+                <div class="research-card">
+                    <h3>Prostate Cancer Genomics</h3>
+                    <p><strong>Focus:</strong> Plasma cfDNA and clinical outcomes</p>
+                    <p>Utilizing plasma cell-free DNA whole genome sequencing to develop and implement multi-gene risk score algorithms for predicting clinical outcomes in prostate cancer patients. This research contributes to personalized medicine approaches in oncology.</p>
+                </div>
+                
+                <div class="research-card">
+                    <h3>Clinical Trial Data Mining</h3>
+                    <p><strong>Focus:</strong> Immunotherapy toxicity patterns</p>
+                    <p>Analysis of over 400,000 clinical trials to identify patterns of immunotherapy toxicity. This large-scale data analysis helps understand adverse event profiles and improve patient safety in cancer treatment.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            
+            <div class="publication">
+                <div class="publication-title">Dramatic Responses to High-Dose Ipilimumab Plus Temozolomide After Progression on Standard- or Low-Dose Ipilimumab in Advanced Melanoma</div>
+                <div class="publication-authors">Williamson, J., <strong>Fadlullah, M.Z.H.</strong>, Kovacsovics-Bankowski, M., et al.</div>
+                <div class="publication-journal"><em>Current Oncology</em>, 32(3), (2025)</div>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Investigation of high-dose ipilimumab combination therapy effectiveness in advanced melanoma patients who progressed on standard treatments.</p>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-title">Multi-gene risk-score for prediction of clinical outcomes in treatment-naïve metastatic castrate resistant prostate cancer</div>
+                <div class="publication-authors"><strong>Fadlullah, M.Z.H.</strong>, Nix, D., Herberts, C., et al.</div>
+                <div class="publication-journal"><em>JNCI Cancer Spectrum</em>, (2025)</div>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Development of a multi-gene risk scoring algorithm using plasma cfDNA whole genome sequencing for predicting clinical outcomes in prostate cancer.</p>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-title">Exploring the Landscape of Immune Checkpoint Inhibitor-Induced Adverse Events Through Big Data Mining of Pan-Cancer Clinical Trials</div>
+                <div class="publication-authors"><strong>Fadlullah, M.Z.H.</strong>, Lin, C.N., Coleman, S., et al.</div>
+                <div class="publication-journal"><em>The Oncologist</em>, (2024)</div>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Comprehensive analysis of over 400,000 clinical trials to identify patterns and predictors of immunotherapy-related adverse events.</p>
+            </div>
+            
+            <p style="margin-top: 2rem;"><strong>For a complete list of 35+ publications, see my <a href="https://scholar.google.com" target="_blank">Google Scholar profile</a>.</strong></p>
+        </section>
+
+        <section id="cv">
+            <h2>Curriculum Vitae</h2>
+            <p>You can download my complete CV here: <a href="#" target="_blank">CV PDF</a></p>
+            
+            <h3 style="margin-top: 2rem; color: #2c3e50;">Education</h3>
+            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                <li><strong>Ph.D. in Medicine (Computational Biology focused)</strong>, University of Manchester, 2022</li>
+                <li><strong>BSc (First Class), Biomedical Science</strong>, University of Queensland, 2011</li>
+            </ul>
+            
+            <h3 style="margin-top: 2rem; color: #2c3e50;">Professional Experience</h3>
+            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                <li><strong>Assistant Professor (Research Track)</strong>, University of Utah, 2024-current</li>
+                <li><strong>Postdoctoral Fellow (Translational Bioinformatics)</strong>, University of Utah, 2022-2023</li>
+                <li><strong>Bioinformatics Analyst</strong>, Cancer Research UK Manchester Institute, 2015-2016</li>
+                <li><strong>Bioinformatics Research Assistant</strong>, Cancer Research Malaysia, 2012-2014</li>
+            </ul>
+            
+            <h3 style="margin-top: 2rem; color: #2c3e50;">Awards & Honors</h3>
+            <ul style="margin: 1rem 0; padding-left: 2rem;">
+                <li>Young Scientist Award, Mid-South Computational Biology & Bioinformatics Society, 2023</li>
+                <li>Ph.D. scholarship, Cancer Research UK Manchester Institute, 2016-2022</li>
+                <li>Travel Conference Award, European Conference On Computational Biology, 2021</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email:</strong> zaki.wilmot@hci.utah.edu
+                </div>
+                <div class="contact-item">
+                    <strong>Office:</strong> Huntsman Cancer Institute
+                </div>
+                <div class="contact-item">
+                    <strong>Institution:</strong> University of Utah
+                </div>
+                <div class="contact-item">
+                    <strong>Location:</strong> Utah, United States
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 2rem; color: #2c3e50;">Find me online</h3>
+            <p style="margin-top: 1rem;">
+                <a href="#" target="_blank">ORCID</a> | 
+                <a href="#" target="_blank">Google Scholar</a> | 
+                <a href="#" target="_blank">ResearchGate</a> | 
+                <a href="#" target="_blank">LinkedIn</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 [Your Name]. Last updated: [Date]</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
